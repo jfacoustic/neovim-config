@@ -23,3 +23,12 @@ o.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smag
 o.splitright = true
 o.splitbelow = true -- When on, splitting a window will put the new window below the current one
 o.termguicolors = true
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "make",
+	callback = function()
+		vim.opt_local.expandtab = false
+		vim.opt_local.tabstop = 8
+		vim.opt_local.shiftwidth = 8
+	end,
+})
