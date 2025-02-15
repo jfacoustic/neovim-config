@@ -18,6 +18,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"clangd",
+				"rust_analyzer",
 			},
 		})
 
@@ -27,6 +28,7 @@ return {
 				"stylua", -- lua formatter
 				"pylint",
 				"eslint_d",
+				"rust_analyzer",
 			},
 		})
 	end,
