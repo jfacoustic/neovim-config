@@ -6,6 +6,12 @@ return {
 		"stevearc/dressing.nvim", -- optional for vim.ui.select
 	},
 	config = function()
-		require("flutter-tools").setup({})
+		require("flutter-tools").setup({
+			fvm = true,
+		})
+		local ok, telescope = pcall(require, "telescope")
+		if ok and telescope.load_extension then
+			telescope.load_extension("flutter")
+		end
 	end,
 }
