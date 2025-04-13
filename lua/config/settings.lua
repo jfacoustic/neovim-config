@@ -32,3 +32,5 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.shiftwidth = 8
 	end,
 })
+
+global.filetype_pl = "prolog"
