@@ -8,6 +8,9 @@ return {
 	config = function()
 		require("flutter-tools").setup({
 			fvm = true,
+			debugger = {
+				enabled = true,
+			},
 		})
 		local ok, telescope = pcall(require, "telescope")
 		if ok and telescope.load_extension then
