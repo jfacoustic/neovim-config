@@ -19,6 +19,7 @@ return {
 				"tailwindcss",
 				"clangd",
 				"rust_analyzer",
+				"lua_ls",
 			},
 		})
 

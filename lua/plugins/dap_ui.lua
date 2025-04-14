@@ -9,5 +9,9 @@ return {
 		vim.keymap.set("n", "<leader>d", function()
 			dapui.toggle()
 		end)
+
+		vim.keymap.set("n", "<leader>d", function()
+			dapui.toggle()
+		end)
 	end,
 }
