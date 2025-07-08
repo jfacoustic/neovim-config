@@ -49,6 +49,50 @@ return {
 					on_attach = on_attach,
 					capabilities = capabilities,
 				})
+				local lspconfig = require("lspconfig")
+				lspconfig.tailwindcss.setup({
+					capabilities = capabilities,
+					on_attach = on_attach,
+					filetypes = {
+						"html",
+						"css",
+						"scss",
+						"javascript",
+						"javascriptreact",
+						"typescript",
+						"typescriptreact",
+						"svelte",
+						"vue",
+					},
+					settings = {
+						tailwindCSS = {
+							classAttributes = {
+								"class",
+								"className",
+								"class:list",
+								"classList",
+								"ngClass",
+								".*Style.*",
+							},
+							includeLanguages = {
+								eelixir = "html-eex",
+								eruby = "erb",
+								htmlangular = "html",
+								templ = "html",
+							},
+							lint = {
+								cssConflict = "warning",
+								invalidApply = "error",
+								invalidConfigPath = "error",
+								invalidScreen = "error",
+								invalidTailwindDirective = "error",
+								invalidVariant = "error",
+								recommendedVariantOrder = "warning",
+							},
+							validate = true,
+						},
+					},
+				})
 			end,
 			["html"] = function()
 				nvim_lsp["html"].setup({
@@ -70,6 +114,12 @@ return {
 			end,
 			["pyright"] = function()
 				nvim_lsp["pyright"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["prismals"] = function()
+				nvim_lsp["prismals"].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
 				})
