@@ -20,6 +20,7 @@ return {
 				"clangd",
 				"rust_analyzer",
 				"lua_ls",
+				"gopls",
 			},
 		})
 
@@ -28,7 +29,6 @@ return {
 				"prettier",
 				"stylua", -- lua formatter
 				"pylint",
-				"eslint_d",
 				"rust_analyzer",
 			},
 		})
