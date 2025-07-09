@@ -6,6 +6,7 @@ return {
 		{ "folke/lazydev.nvim", opts = {} },
 	},
 	config = function()
+		--[[
 		local nvim_lsp = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
 
@@ -164,6 +165,7 @@ return {
 				})
 			end,
 		})
+    --]]
 	end,
 	setup = {
 		clangd = function(_, opts)

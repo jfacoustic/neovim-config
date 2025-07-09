@@ -1,14 +1,20 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason-lspconfig.nvim",
+	opts = {},
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+		{ "mason-org/mason.nvim", opts = {} },
+		"neovim/nvim-lspconfig",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
 		require("mason").setup()
 
 		require("mason-lspconfig").setup({
-			automatic_installation = true,
+			automatic_enable = {
+				exclude = {
+					"jdtls",
+				},
+			},
 			ensure_installed = {
 				"cssls",
 				"eslint",
